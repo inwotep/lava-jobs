@@ -5,7 +5,7 @@
         "parameters":
         {
             "boot": "LAVA_IMAGE_LOCATION_BOOT",
-            "userdata": "LAVA_IMAGE_LOCATION_USERDATA",
+            "data": "LAVA_IMAGE_LOCATION_DATA",
             "system": "LAVA_IMAGE_LOCATION_SYSTEM"
         }
     },
