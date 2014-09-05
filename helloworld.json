@@ -1,0 +1,43 @@
+{
+    "actions": [
+    {
+        "command": "deploy_linaro_android_image",
+        "parameters":
+        {
+            "boot": "LAVA_IMAGE_LOCATION_BOOT",
+            "userdata": "LAVA_IMAGE_LOCATION_USERDATA",
+            "system": "LAVA_IMAGE_LOCATION_SYSTEM"
+        }
+    },
+    {
+        "command": "boot_linaro_android_image"
+    },
+    {
+        "command": "lava_android_test_install",
+        "parameters":
+        {
+            "tests": [
+                "helloworld"
+            ]
+        }
+    },
+    {
+        "command": "lava_android_test_run",
+        "parameters":
+        {
+            "test_name": "helloworld"
+        }
+    },
+    {
+        "command": "submit_results",
+        "parameters":
+        {
+            "server": "LAVA_SERVER",
+            "stream": "LAVA_RESULT_STREAM"
+        }
+    }],
+    "device_type": "LAVA_DEVICE_TYPE",
+    "image_type": "android",
+    "job_name": "LAVA_JOB_NAME",
+    "timeout": 300
+}
